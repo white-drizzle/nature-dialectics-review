@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="自然辩证法五章课件思考题与考前复习。">
+  <meta name="theme-color" content="#102d29">
+  <title>自然辩证法 · 考前复习</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f6f5ed;
+      --card: #fffcf5;
+      --ink: #172d28;
+      --muted: #526660;
+      --line: #d8dfd3;
+      --forest: #102d29;
+      --green: #255e4e;
+      --mint: #dceade;
+      --accent: #d5edb6;
+      font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-padding-top: 1.5rem; }
+    body { margin: 0; background: var(--paper); color: var(--ink); line-height: 1.65; }
+    a { color: inherit; text-underline-offset: .19em; }
+    button, input { font: inherit; }
+    button, summary, input[type="checkbox"] { cursor: pointer; }
+    [hidden] { display: none !important; }
+    :focus-visible { outline: 2px solid #37785e; outline-offset: 3px; }
+    .hero :focus-visible { outline-color: var(--accent); }
+    .wrap { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+    .skip { position: absolute; left: 1rem; top: -5rem; padding: .55rem .8rem; background: var(--card); color: var(--ink); z-index: 2; }
+    .skip:focus { top: 1rem; }
+    .hero {
+      background: radial-gradient(ellipse at 95% 0%, #28584b, transparent 64%), var(--forest);
+      color: #f8f8e9;
+      border-bottom: 4px solid #b4ca94;
+    }
+    .hero-inner { padding: 2.5rem 0 2.8rem; }
+    .hero-top { display: flex; align-items: center; justify-content: space-between; gap: .75rem 1.5rem; flex-wrap: wrap; }
+    .eyebrow { margin: 0; color: var(--accent); font-size: .83rem; font-weight: 700; letter-spacing: .12em; }
+    .hero-nav { display: flex; flex-wrap: wrap; gap: .5rem 1.2rem; font-size: .87rem; }
+    .hero-nav a { color: #ebf1e0; }
+    h1, h2, h3 { line-height: 1.3; margin: 0; }
+    h1 { margin-top: 1.4rem; font: 700 clamp(2.3rem, 6.2vw, 4.7rem)/1.22 "Songti SC", "Noto Serif CJK SC", SimSun, serif; letter-spacing: .045em; }
+    .hero p.description { color: #d6e4d8; margin: .65rem 0 1.4rem; }
+    .exam-format { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; padding: 0; list-style: none; }
+    .exam-format li { padding: .22rem .68rem; border: 1px solid #5a7568; border-radius: .35rem; color: #e0ecdf; font-size: .87rem; }
+    .exam-format strong { color: var(--accent); }
+    .layout { display: grid; grid-template-columns: 225px minmax(0, 1fr); gap: 2rem; align-items: start; padding: 2.5rem 0 3.5rem; }
+    .sidebar { position: sticky; top: 1.5rem; }
+    .sidebar h2 { margin-bottom: .55rem; font-size: .95rem; }
+    .chapter-nav { display: grid; gap: .12rem; }
+    .chapter-nav a { display: flex; align-items: baseline; padding: .48rem .38rem; text-decoration: none; gap: .56rem; border-radius: .35rem; font-size: .85rem; }
+    .chapter-nav a:hover { background: var(--mint); }
+    .chapter-nav span { color: var(--green); font-weight: 700; }
+    .progress-box { margin-top: 1.3rem; padding: .75rem 0; border-top: 1px solid var(--line); }
+    .progress-box label { display: block; font-size: .84rem; color: var(--muted); }
+    .progress-box strong { color: var(--ink); }
+    progress { width: 100%; height: .55rem; accent-color: var(--green); }
+    .section-heading { display: flex; justify-content: space-between; align-items: baseline; gap: .5rem 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    .section-heading h2 { font-size: 1.58rem; }
+    .section-heading p { margin: 0; color: var(--muted); font-size: .87rem; }
+    .tools { display: flex; align-items: center; flex-wrap: wrap; gap: .55rem 1rem; margin: 0 0 1.1rem; }
+    .tools input[type="search"] { flex: 1 1 240px; min-width: 0; width: 100%; border: 1px solid #bdc9bd; background: var(--card); color: var(--ink); border-radius: .45rem; padding: .53rem .75rem; }
+    .tools label { display: inline-flex; align-items: center; gap: .33rem; color: var(--muted); font-size: .89rem; }
+    input[type="checkbox"] { margin: 0; width: 1rem; height: 1rem; accent-color: var(--green); }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    .chapter { padding: 1.05rem 1.18rem; background: var(--card); border: 1px solid var(--line); border-radius: .65rem; margin-bottom: .8rem; }
+    .chapter-title { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: .18rem 1rem; }
+    .chapter-title h3 { font-size: 1.08rem; }
+    .chapter-title span { color: var(--green); font-weight: 700; margin-right: .5rem; }
+    .source { color: var(--muted); font-size: .8rem; margin: 0; }
+    .questions { margin: .64rem 0 0; padding-left: 1.35rem; }
+    .questions > li { padding: .49rem 0 .49rem .22rem; border-top: 1px solid #e6eae1; }
+    .questions > li::marker { color: var(--green); font-weight: 700; }
+    .prompt { display: flex; justify-content: space-between; align-items: flex-start; gap: .8rem; }
+    .prompt label { display: grid; place-items: center; width: 2rem; height: 1.8rem; flex: 0 0 2rem; }
+    .prompt:has(input:checked) > span { color: var(--muted); }
+    #no-results { margin: .55rem 0; padding: .8rem 1rem; background: var(--mint); border-radius: .5rem; }
+    footer { border-top: 1px solid var(--line); padding: 1rem 0 1.6rem; color: var(--muted); font-size: .82rem; }
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 28px, 680px); }
+      .hero-inner { padding: 1.6rem 0 1.8rem; }
+      .layout { display: block; padding-top: 1.35rem; }
+      .sidebar { position: static; margin-bottom: 1.5rem; }
+      .chapter-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .14rem .5rem; }
+      .progress-box { margin-top: .55rem; padding: .45rem 0 0; }
+      .chapter { padding: .8rem .78rem; }
+    }
+    @media (max-width: 380px) { .chapter-nav { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#questions">跳到思考题</a>
+  <header class="hero" id="top">
+    <div class="wrap hero-inner">
+      <div class="hero-top">
+        <p class="eyebrow">课件思考题与题型练习</p>
+        <nav class="hero-nav" aria-label="页面导航"><a href="#questions">章末思考题</a></nav>
+      </div>
+      <h1>自然辩证法</h1>
+      <p class="description">五章 · 21 道章末思考题</p>
+      <ul class="exam-format" aria-label="本次考试题型">
+        <li><strong>2</strong> 道辨析</li><li><strong>3</strong> 道简答</li><li><strong>1</strong> 道材料论述</li>
+      </ul>
+    </div>
+  </header>
+  <div class="wrap layout">
+    <aside class="sidebar">
+      <h2>按章复习</h2>
+      <nav class="chapter-nav" aria-label="章节目录">
+        <a href="#chapter-1"><span>一</span> 马克思主义自然观</a>
+        <a href="#chapter-2"><span>二</span> 马克思主义科学技术观</a>
+        <a href="#chapter-3"><span>三</span> 马克思主义科学技术方法论</a>
+        <a href="#chapter-4"><span>四</span> 马克思主义科学技术社会论</a>
+        <a href="#chapter-5"><span>五</span> 中国马克思主义科学技术观</a>
+      </nav>
+      <div class="progress-box" data-enhancement hidden>
+        <label for="progress">已复习 <strong id="completed">0 / 21</strong></label>
+        <progress id="progress" value="0" max="21"></progress>
+      </div>
+    </aside>
+    <main>
+      <section id="questions" aria-labelledby="questions-heading">
+        <div class="section-heading">
+          <h2 id="questions-heading">章末思考题</h2>
+          <p>按课件原文整理 · 页码为 PDF 页码</p>
+        </div>
+        <div class="tools" data-enhancement hidden>
+          <label class="sr-only" for="search">搜索思考题</label>
+          <input id="search" type="search" placeholder="搜题干，例如：生态、创新、风险">
+          <label><input id="remaining" type="checkbox"> 仅看未复习</label>
+        </div>
+        <p id="search-status" class="sr-only" aria-live="polite"></p>
+        <p id="no-results" hidden>没有符合条件的题目。可以换个关键词或取消「仅看未复习」。</p>
+
+        <article class="chapter" id="chapter-1">
+          <div class="chapter-title"><h3><span>第一章</span>马克思主义自然观</h3><p class="source">课件第 144 页 · 4 题</p></div>
+          <ol class="questions">
+            <li id="q1-1"><div class="prompt"><span>如何理解朴素唯物主义自然观、机械唯物主义自然观和辩证唯物主义自然观的辩证关系？</span></div></li>
+            <li id="q1-2"><div class="prompt"><span>如何理解系统自然观、人工自然观和生态自然观的辩证关系？</span></div></li>
+            <li id="q1-3"><div class="prompt"><span>如何认识生态自然观和生态文明建设之间的辩证关系？</span></div></li>
+            <li id="q1-4"><div class="prompt"><span>如何理解“绿水青山就是金山银山”？</span></div></li>
+          </ol>
+        </article>
+        <article class="chapter" id="chapter-2">
+          <div class="chapter-title"><h3><span>第二章</span>马克思主义科学技术观</h3><p class="source">课件第 47 页 · 3 题</p></div>
+          <ol class="questions">
+            <li id="q2-1"><div class="prompt"><span>怎样认识马克思、恩格斯的科学技术思想在马克思主义理论体系中的重要地位？</span></div></li>
+            <li id="q2-2"><div class="prompt"><span>如何理解科学技术一体化的特征？</span></div></li>
+            <li id="q2-3"><div class="prompt"><span>为什么说科学发展表现为继承与创新的统一？</span></div></li>
+          </ol>
+        </article>
+        <article class="chapter" id="chapter-3">
+          <div class="chapter-title"><h3><span>第三章</span>马克思主义科学技术方法论</h3><p class="source">课件第 171 页 · 5 题</p></div>
+          <ol class="questions">
+            <li id="q3-1"><div class="prompt"><span>如何理解马克思主义科学技术方法论与科学研究中的具体方法的关系？</span></div></li>
+            <li id="q3-2"><div class="prompt"><span>如何理解辩证思维渗透在科学研究的全部过程中？</span></div></li>
+            <li id="q3-3"><div class="prompt"><span>如何把握创造性思维特征？</span></div></li>
+            <li id="q3-4"><div class="prompt"><span>注意多学科的交叉与融贯有何方法论意义？</span></div></li>
+            <li id="q3-5"><div class="prompt"><span>战略性思维对于科学研究有何意义？</span></div></li>
+          </ol>
+        </article>
+        <article class="chapter" id="chapter-4">
+          <div class="chapter-title"><h3><span>第四章</span>马克思主义科学技术社会论</h3><p class="source">课件第 100 页 · 6 题</p></div>
+          <ol class="questions">
+            <li id="q4-1"><div class="prompt"><span>为什么说“科学是一种在历史上起推动作用的、革命的力量”？</span></div></li>
+            <li id="q4-2"><div class="prompt"><span>如何看待科学技术对人的异化和对自然的异化？</span></div></li>
+            <li id="q4-3"><div class="prompt"><span>科学技术的社会体制和组织机构对科学技术的发展有何意义？</span></div></li>
+            <li id="q4-4"><div class="prompt"><span>为什么要对科学技术工作者进行伦理规范？</span></div></li>
+            <li id="q4-5"><div class="prompt"><span>如何理解科学技术文化与人文文化之间的冲突与协调？</span></div></li>
+            <li id="q4-6"><div class="prompt"><span>科学技术的风险有哪些？如何恰当地进行科学技术风险评价与决策？</span></div></li>
+          </ol>
+        </article>
+        <article class="chapter" id="chapter-5">
+          <div class="chapter-title"><h3><span>第五章</span>中国马克思主义科学技术观</h3><p class="source">课件第 69 页 · 3 题</p></div>
+          <ol class="questions">
+            <li id="q5-1"><div class="prompt"><span>为什么说中国马克思主义科学技术观是一个科学、完整的思想理论体系？</span></div></li>
+            <li id="q5-2"><div class="prompt"><span>如何理解中国马克思主义科学技术观的理论精髓？</span></div></li>
+            <li id="q5-3"><div class="prompt"><span>如何理解习近平新时代中国特色社会主义思想中的科学技术观的时代意义？</span></div></li>
+          </ol>
+        </article>
+      </section>
+    </main>
+  </div>
+  <footer><div class="wrap"><a href="#top">返回顶部 ↑</a></div></footer>
+  <script>
+    const storageKey = 'nature-dialectics-review-v1';
+    const search = document.querySelector('#search');
+    const remaining = document.querySelector('#remaining');
+    const chapters = Array.from(document.querySelectorAll('.chapter'));
+    const rows = Array.from(document.querySelectorAll('.questions > li'));
+    let saved = [];
+    try {
+      const data = JSON.parse(localStorage.getItem(storageKey));
+      if (Array.isArray(data)) saved = data;
+    } catch { /* The checkboxes still work in this tab. */ }
+
+    const entries = rows.map((row) => {
+      const prompt = row.querySelector('.prompt');
+      const label = document.createElement('label');
+      const checkbox = document.createElement('input');
+      checkbox.type = 'checkbox';
+      checkbox.checked = saved.includes(row.id);
+      checkbox.setAttribute('aria-label', `标为已复习：${prompt.textContent.trim()}`);
+      label.title = '标为已复习';
+      label.append(checkbox);
+      prompt.append(label);
+      return {row, checkbox, text: prompt.textContent.trim().toLowerCase()};
+    });
+
+    function render() {
+      const terms = search.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+      let visible = 0;
+      let completed = 0;
+      for (const {row, checkbox, text} of entries) {
+        row.hidden = (remaining.checked && checkbox.checked) || !terms.every((term) => text.includes(term));
+        if (!row.hidden) visible++;
+        if (checkbox.checked) completed++;
+      }
+      for (const chapter of chapters) {
+        chapter.hidden = !chapter.querySelector('.questions > li:not([hidden])');
+      }
+      document.querySelector('#completed').textContent = `${completed} / ${entries.length}`;
+      document.querySelector('#progress').value = completed;
+      document.querySelector('#no-results').hidden = visible !== 0;
+      document.querySelector('#search-status').textContent = `当前显示 ${visible} 道思考题`;
+    }
+
+    function clearFilters() {
+      search.value = '';
+      remaining.checked = false;
+      render();
+    }
+
+    for (const {checkbox} of entries) {
+      checkbox.addEventListener('change', () => {
+        try {
+          const completed = entries.filter((entry) => entry.checkbox.checked).map((entry) => entry.row.id);
+          localStorage.setItem(storageKey, JSON.stringify(completed));
+        } catch { /* Browser storage can be disabled. */ }
+        render();
+      });
+    }
+    search.addEventListener('input', render);
+    remaining.addEventListener('change', render);
+    for (const link of document.querySelectorAll('.chapter-nav a')) {
+      link.addEventListener('click', clearFilters);
+    }
+    for (const control of document.querySelectorAll('[data-enhancement]')) control.hidden = false;
+    render();
+  </script>
+</body>
+</html>
