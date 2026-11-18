@@ -83,6 +83,31 @@
     .answer[open] { border-left: 3px solid #a8bea6; padding-left: .68rem; }
     .answer p { margin: .36rem 0 0; }
     #no-results { margin: .55rem 0; padding: .8rem 1rem; background: var(--mint); border-radius: .5rem; }
+    .study-section { margin-top: 2.4rem; }
+    .guide {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      background: var(--mint);
+      border-radius: .6rem;
+      margin: 0 0 1rem;
+      padding: .75rem 1rem;
+      gap: .55rem 1rem;
+    }
+    .guide div { padding: .16rem 0; }
+    .guide dt { color: var(--green); font-weight: 700; font-size: .85rem; }
+    .guide dd { margin: .19rem 0 0; font-size: .89rem; }
+    .study-card { background: var(--card); padding: 1rem 1.18rem; border: 1px solid var(--line); border-radius: .65rem; margin-bottom: .8rem; }
+    .study-card h3 { font-size: 1.07rem; }
+    .study-card > p { margin: .62rem 0; }
+    .study-card > .source { margin: .65rem 0 0; }
+    .practice-list { padding-left: 1.35rem; margin: .67rem 0 0; }
+    .practice-list > li { padding: .52rem 0 .49rem .22rem; border-top: 1px solid #e6eae1; }
+    .practice-list > li::marker { color: var(--green); font-weight: 700; }
+    .case { border-left: 3px solid #a8bea6; padding-left: .72rem; margin: .65rem 0; color: var(--muted); }
+    .case-points { padding-left: 1.2rem; margin: .4rem 0; }
+    .case-points li + li { margin-top: .3rem; }
+    .source-notes { padding-left: 1.22rem; margin: .68rem 0 0; }
+    .source-notes li + li { margin-top: .5rem; }
     footer { border-top: 1px solid var(--line); padding: 1rem 0 1.6rem; color: var(--muted); font-size: .82rem; }
     @media (max-width: 760px) {
       .wrap { width: min(100% - 28px, 680px); }
@@ -91,7 +116,8 @@
       .sidebar { position: static; margin-bottom: 1.5rem; }
       .chapter-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .14rem .5rem; }
       .progress-box { margin-top: .55rem; padding: .45rem 0 0; }
-      .chapter { padding: .8rem .78rem; }
+      .chapter, .study-card { padding: .8rem .78rem; }
+      .guide { grid-template-columns: 1fr; }
     }
     @media (max-width: 380px) { .chapter-nav { grid-template-columns: 1fr; } }
   </style>
@@ -101,8 +127,12 @@
   <header class="hero" id="top">
     <div class="wrap hero-inner">
       <div class="hero-top">
-        <p class="eyebrow">课件思考题与题型练习</p>
-        <nav class="hero-nav" aria-label="页面导航"><a href="#questions">章末思考题</a></nav>
+        <p class="eyebrow">考前复习</p>
+        <nav class="hero-nav" aria-label="页面导航">
+          <a href="#questions">章末思考题</a>
+          <a href="#practice">题型模拟</a>
+          <a href="#sources">旧卷与资料</a>
+        </nav>
       </div>
       <h1>自然辩证法</h1>
       <p class="description">五章 · 21 道章末思考题及参考要点</p>
@@ -124,6 +154,7 @@
       <div class="progress-box" data-enhancement hidden>
         <label for="progress">已复习 <strong id="completed">0 / 21</strong></label>
         <progress id="progress" value="0" max="21"></progress>
+        <p class="source">勾选题目右侧可记录进度，保存在当前浏览器。</p>
       </div>
     </aside>
     <main>
@@ -292,6 +323,113 @@
           </ol>
         </article>
       </section>
+
+      <section class="study-section" id="practice" aria-labelledby="practice-heading">
+        <div class="section-heading">
+          <h2 id="practice-heading">按本次题型模拟</h2>
+          <p>2 道辨析 · 3 道简答 · 1 道材料论述</p>
+        </div>
+        <dl class="guide">
+          <div><dt>辨析</dt><dd>先判正误或片面性，再解释概念，最后指出命题成立的条件或错误所在。</dd></div>
+          <div><dt>简答</dt><dd>先点明概念或总关系，分点写作用、机制或层次，结尾扣回题干。</dd></div>
+          <div><dt>材料论述</dt><dd>提取材料事实，用课件概念解释机制，再把风险和对策一一对应。</dd></div>
+        </dl>
+
+        <article class="study-card" data-type="distinction">
+          <h3>辨析题</h3>
+          <ol class="practice-list">
+            <li>
+              古代朴素唯物主义自然观认为，自然物质本身具有运动的倾向。
+              <details class="answer"><summary>展开判断与理由</summary>
+                <p><strong>基本正确。</strong>古代朴素唯物主义者尝试从自然本身解释生成与运动，例如用阴阳相互作用说明变化。这体现了整体、动态的眼光。其论证主要依靠直观经验和思辨，尚缺乏近代实验科学的检验。</p>
+                <p class="source">数字孪生卷第 1 页辨析改写；第一章第 11–13、24、29、43 页。</p>
+              </details>
+            </li>
+            <li>
+              创造性思维的最大特色就在于想象。
+              <details class="answer"><summary>展开判断与理由</summary>
+                <p><strong>片面。</strong>想象是产生新设想的重要非逻辑思维形式。创造性思维的特征还表现为方向求异、结构灵活、过程飞跃、效果整体和表达新颖。研究中也需要类比、归纳、演绎来形成、筛选和检验构想。</p>
+                <p class="source">Sora 卷第 3 页辨析改写；第三章第 78–85 页。</p>
+              </details>
+            </li>
+          </ol>
+        </article>
+        <article class="study-card" data-type="short">
+          <h3>简答题</h3>
+          <ol class="practice-list">
+            <li>
+              机械唯物主义自然观为什么会被辩证唯物主义自然观超越？
+              <details class="answer"><summary>展开参考要点</summary>
+                <p>① 它承认自然的物质性与规律性，推动实验和数学方法。② 它倾向于把运动简化为机械运动，难以解释事物间的普遍联系、内部矛盾与历史发展。③ 星云假说、地质渐变论等呈现了自然界的历史过程。辩证唯物主义继承其合理内核，并把自然放到联系、发展和实践中理解。</p>
+                <p class="source">数字孪生卷第 1 页简答改写；第一章第 52–71 页。</p>
+              </details>
+            </li>
+            <li>
+              科学实验为什么要具备可重复性？
+              <details class="answer"><summary>展开参考要点</summary>
+                <p>① 定义实验对象、操作与控制条件，并记录方法和数据。② 研究者在可比条件下复做，能检查结论是否受偶然波动、设备偏差或操作失误影响。③ 公开可重复的方法使结论可被独立检验，并帮助找到适用范围。在允许的误差或统计波动内，结果应支持相容的结论。</p>
+                <p class="source">数字孪生卷第 1 页简答改写；第三章第 135–147 页，《自辩合并后》PDF 第 32、37 页。</p>
+              </details>
+            </li>
+            <li>
+              中国马克思主义科学技术创新观的三个时期有什么联系与发展？
+              <details class="answer"><summary>展开参考要点</summary>
+                <p>① 毛泽东思想强调“向科学进军”，以自力更生为主、争取外援为辅。② 改革开放和社会主义现代化建设新时期强调科学技术是第一生产力，逐步提出科教兴国、提高自主创新能力和建设创新型国家。③ 新时代强调创新是第一动力，实施创新驱动发展战略，建设世界科技强国。共同主线是立足国情，发挥科技对社会生产和现代化建设的支撑作用。</p>
+                <p class="source">数字孪生卷第 1 页简答改写；第五章第 4–5、9–11、23–27、43–48、64 页。</p>
+              </details>
+            </li>
+          </ol>
+        </article>
+        <article class="study-card" data-type="material">
+          <h3>材料论述题 · 城市内涝预警</h3>
+          <p class="case">某市把降雨、水位和排水管网数据接入数字孪生平台，用模型推演内涝风险。试点可提前告警，但部分街区传感器不足，一些老年人难以及时查看短信，平台持续采集居民位置也引起争议。</p>
+          <p><strong>作答要求</strong>　用系统自然观说明平台为何有效、在哪些条件下会失灵。分析风险，并提出体现以人为本的决策与治理措施。</p>
+          <details class="answer"><summary>展开参考结构</summary>
+            <ol class="case-points">
+              <li><strong>系统及反馈。</strong>降雨、地表径流、河湖、管网和社区相互作用。平台通过传感数据、模型与演练反馈掌握全局，极端降雨与传感器盲区会放大模型的不确定性。分区实测和复盘可检验模型的适用范围。</li>
+              <li><strong>收益和各方承担的风险。</strong>预警提早可减少人员与财产损失。漏报威胁安全，警报覆盖不均会使部分居民承担更高风险，持续收集位置涉及隐私。分别讨论后果、发生条件和受影响群体。</li>
+              <li><strong>以人为本的治理。</strong>给低覆盖区补测，极端天气保留人工复核与应急通道，提供广播、电话和线下网格通知。限定位置数据用途及保留期限。由政府协调专家和社区，依据误漏报、覆盖率与响应时间迭代。</li>
+            </ol>
+            <p class="source">据数字孪生卷第 1–2 页主题原创情境；第一章第 83、87 页，第四章第 73、76、81、96–98 页。</p>
+          </details>
+        </article>
+        <article class="study-card">
+          <h3>补练 · 生成式 AI 与学习</h3>
+          <p class="case">某高校用生成式 AI 辅导写作，学生能更快得到反馈，但出现编造引文、上传个人信息以及直接提交生成稿的现象。</p>
+          <p><strong>作答要求</strong>　分析这种使用方式对学习和人的主体性的影响，提出兼顾创新收益与伦理责任的办法。</p>
+          <details class="answer"><summary>展开参考结构</summary>
+            <ol class="case-points">
+              <li><strong>收益如何发生。</strong>即时反馈与辅助表达能减少重复劳动，帮助学生比较观点和修改论证。收益要看学生是否保留独立阅读、判断与求证的环节。</li>
+              <li><strong>风险及成因。</strong>让系统替代判断会削弱主体性，生成内容可能缺乏证据，上传原始资料可能造成隐私泄露。评价时还应考虑误判申诉和学生之间的可及性差异。</li>
+              <li><strong>把责任落到环节。</strong>学生逐条核验引文并说明 AI 的使用，教师设计过程性评价并保留人工核查，学校为数据提供安全边界和申诉渠道，持续观察学习质量和受影响人群的反馈。</li>
+            </ol>
+            <p class="source">综合 Sora 卷与《人工智能发展的意义——2023试卷材料分析》的主题原创情境；第二章第 43–45 页，第四章第 70–81、96–98 页。</p>
+          </details>
+        </article>
+      </section>
+
+      <section class="study-section" id="sources" aria-labelledby="sources-heading">
+        <div class="section-heading">
+          <h2 id="sources-heading">旧卷与补充资料</h2>
+          <p>题干出处和查缺补漏位置</p>
+        </div>
+        <article class="study-card">
+          <h3>旧卷回看</h3>
+          <ul class="source-notes">
+            <li><strong>《扫描件_24年自辩考题》PDF 第 1–2 页。</strong>数字孪生卷。可回练机械唯物主义自然观、实验可重复性、科技创新观三个时期，以及数字孪生风险和以人为本。</li>
+            <li><strong>同一文件第 3 页。</strong>Sora 卷。可回练科技发展的社会需求、科学事实与科学假说、人工智能影响及治理。两份扫描均另设论述题，年份线索来自文件名，扫描页缺学年题头。</li>
+            <li><strong>《13、15、17级自辩历年真题》Word。</strong>第 1、5 张图为 2015 级秋季试卷，屠呦呦案例可练科学共同体规范。第 6–7 张图为 2017 级试卷，AlphaGo 案例可练知识与实践、技术与人的主体性。</li>
+          </ul>
+        </article>
+        <article class="study-card">
+          <h3>查漏补缺</h3>
+          <ul class="source-notes">
+            <li><strong>《2018版自然辩证法课后思考题》PDF。</strong>第 2–3 页补三种自然观和“两山”，第 7–8 页补方法论，第 9–10 页补社会建制、伦理和风险。第五章结合当前课件第 3 页记创新观、人才观和发展观。</li>
+            <li><strong>《自辩合并后》PDF 第 50–52 页。</strong>可用来训练辨析。遇到“任何”“唯一”一类绝对表述，要核对概念适用范围。比如科学事实的内容具有客观性，描述形式体现认识主体的选择，见第三章第 136 页。</li>
+            <li><strong>《人工智能发展的意义——2023试卷材料分析》Word。</strong>可用来找生产工具、学习生活与社会治理等论述角度，作为辅助阅读。</li>
+          </ul>
+        </article>
+      </section>
     </main>
   </div>
   <footer><div class="wrap"><a href="#top">返回顶部 ↑</a></div></footer>
@@ -319,6 +457,11 @@
       prompt.append(label);
       return {row, checkbox, text: prompt.textContent.trim().toLowerCase()};
     });
+    for (const chapter of chapters) {
+      Array.from(chapter.querySelectorAll('.questions > li')).forEach((row, index) => {
+        row.value = index + 1;
+      });
+    }
 
     function render() {
       const terms = search.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
