@@ -73,11 +73,15 @@
     .chapter-title span { color: var(--green); font-weight: 700; margin-right: .5rem; }
     .source { color: var(--muted); font-size: .8rem; margin: 0; }
     .questions { margin: .64rem 0 0; padding-left: 1.35rem; }
-    .questions > li { padding: .49rem 0 .49rem .22rem; border-top: 1px solid #e6eae1; }
+    .questions > li { padding: .58rem 0 .58rem .22rem; border-top: 1px solid #e6eae1; }
     .questions > li::marker { color: var(--green); font-weight: 700; }
     .prompt { display: flex; justify-content: space-between; align-items: flex-start; gap: .8rem; }
     .prompt label { display: grid; place-items: center; width: 2rem; height: 1.8rem; flex: 0 0 2rem; }
     .prompt:has(input:checked) > span { color: var(--muted); }
+    .answer { margin: .22rem 0 .15rem; }
+    .answer summary { width: fit-content; color: var(--green); font-size: .84rem; font-weight: 700; }
+    .answer[open] { border-left: 3px solid #a8bea6; padding-left: .68rem; }
+    .answer p { margin: .36rem 0 0; }
     #no-results { margin: .55rem 0; padding: .8rem 1rem; background: var(--mint); border-radius: .5rem; }
     footer { border-top: 1px solid var(--line); padding: 1rem 0 1.6rem; color: var(--muted); font-size: .82rem; }
     @media (max-width: 760px) {
@@ -101,7 +105,7 @@
         <nav class="hero-nav" aria-label="页面导航"><a href="#questions">章末思考题</a></nav>
       </div>
       <h1>自然辩证法</h1>
-      <p class="description">五章 · 21 道章末思考题</p>
+      <p class="description">五章 · 21 道章末思考题及参考要点</p>
       <ul class="exam-format" aria-label="本次考试题型">
         <li><strong>2</strong> 道辨析</li><li><strong>3</strong> 道简答</li><li><strong>1</strong> 道材料论述</li>
       </ul>
@@ -126,7 +130,7 @@
       <section id="questions" aria-labelledby="questions-heading">
         <div class="section-heading">
           <h2 id="questions-heading">章末思考题</h2>
-          <p>按课件原文整理 · 页码为 PDF 页码</p>
+          <p>先闭卷答题，再展开参考要点。页码为 PDF 页码。</p>
         </div>
         <div class="tools" data-enhancement hidden>
           <label class="sr-only" for="search">搜索思考题</label>
@@ -139,47 +143,152 @@
         <article class="chapter" id="chapter-1">
           <div class="chapter-title"><h3><span>第一章</span>马克思主义自然观</h3><p class="source">课件第 144 页 · 4 题</p></div>
           <ol class="questions">
-            <li id="q1-1"><div class="prompt"><span>如何理解朴素唯物主义自然观、机械唯物主义自然观和辩证唯物主义自然观的辩证关系？</span></div></li>
-            <li id="q1-2"><div class="prompt"><span>如何理解系统自然观、人工自然观和生态自然观的辩证关系？</span></div></li>
-            <li id="q1-3"><div class="prompt"><span>如何认识生态自然观和生态文明建设之间的辩证关系？</span></div></li>
-            <li id="q1-4"><div class="prompt"><span>如何理解“绿水青山就是金山银山”？</span></div></li>
+            <li id="q1-1"><div class="prompt"><span>如何理解朴素唯物主义自然观、机械唯物主义自然观和辩证唯物主义自然观的辩证关系？</span></div>
+              <details class="answer"><summary>参考要点</summary>
+                <p>按三种自然观各写一层。朴素唯物主义以物质解释自然，看到整体和运动，主要依靠直观思辨。机械唯物主义引入实验与数学，承认物质性和客观规律，却把丰富的变化过多归结为机械运动。辩证唯物主义吸收前两者的合理成分，从普遍联系、变化发展和实践的角度把握自然。</p>
+                <p class="source">第一章第 36–43、49–67 页</p>
+              </details>
+            </li>
+            <li id="q1-2"><div class="prompt"><span>如何理解系统自然观、人工自然观和生态自然观的辩证关系？</span></div>
+              <details class="answer"><summary>参考要点</summary>
+                <p>三者可按“方法—实践—方向”来记。系统自然观关注整体、结构和演化。人工自然观关注人通过科技与实践改变自然，也要求认清改造的限度。生态自然观关注人与自然的相互依存，将和谐共生与可持续发展作为方向。三者共同发展了辩证唯物主义自然观。</p>
+                <p class="source">第一章第 139–141 页；《2018版自然辩证法课后思考题》PDF 第 2 页</p>
+              </details>
+            </li>
+            <li id="q1-3"><div class="prompt"><span>如何认识生态自然观和生态文明建设之间的辩证关系？</span></div>
+              <details class="answer"><summary>参考要点</summary>
+                <p>生态自然观为生态文明建设提供关于人与自然关系的理论依据，要求尊重自然规律和生态承载力。生态文明建设通过生态保护修复、绿色生产生活和制度建设落实这些认识。实践中的成效和新问题，又能检验并丰富生态自然观。</p>
+                <p class="source">第一章第 112–120、135–138 页</p>
+              </details>
+            </li>
+            <li id="q1-4"><div class="prompt"><span>如何理解“绿水青山就是金山银山”？</span></div>
+              <details class="answer"><summary>参考要点</summary>
+                <p>生态环境有自身价值，也是民生福祉和长期发展的基础。保护修复得当时，生态优势可通过绿色产业等途径转化为发展优势。答题可用安吉余村说明，治理污染和转变产业方式如何缓解短期增收与长期生态损失之间的矛盾。</p>
+                <p class="source">第一章第 112–120 页</p>
+              </details>
+            </li>
           </ol>
         </article>
         <article class="chapter" id="chapter-2">
           <div class="chapter-title"><h3><span>第二章</span>马克思主义科学技术观</h3><p class="source">课件第 47 页 · 3 题</p></div>
           <ol class="questions">
-            <li id="q2-1"><div class="prompt"><span>怎样认识马克思、恩格斯的科学技术思想在马克思主义理论体系中的重要地位？</span></div></li>
-            <li id="q2-2"><div class="prompt"><span>如何理解科学技术一体化的特征？</span></div></li>
-            <li id="q2-3"><div class="prompt"><span>为什么说科学发展表现为继承与创新的统一？</span></div></li>
+            <li id="q2-1"><div class="prompt"><span>怎样认识马克思、恩格斯的科学技术思想在马克思主义理论体系中的重要地位？</span></div>
+              <details class="answer"><summary>参考要点</summary>
+                <p>马克思、恩格斯用辩证唯物主义和历史唯物主义考察科学技术的本质、动力和社会作用，为马克思主义科学技术观奠定理论基础。科学体现人与自然的理论关系，进入生产实践可转化为现实生产力。技术体现人与自然的实践关系，也受社会条件影响。由此可把科技发展放进生产方式和社会历史中理解。</p>
+                <p class="source">第二章第 3、27–44 页</p>
+              </details>
+            </li>
+            <li id="q2-2"><div class="prompt"><span>如何理解科学技术一体化的特征？</span></div>
+              <details class="answer"><summary>参考要点</summary>
+                <p>科学侧重揭示规律，技术侧重实现实践目标，两者的目的和评价标准各有侧重。科学为技术提供原理，技术借助新仪器、实验手段和现实需求推动科学。现代科技活动中，研究、开发和应用越来越紧密地衔接。</p>
+                <p class="source">第二章第 40–42 页</p>
+              </details>
+            </li>
+            <li id="q2-3"><div class="prompt"><span>为什么说科学发展表现为继承与创新的统一？</span></div>
+              <details class="answer"><summary>参考要点</summary>
+                <p>已有事实、方法和理论为新研究提供基础。新事实和新问题会促使研究者修正、扩展或重构原有解释，经过检验的旧成果可以在适用条件下保留。继承提供积累，创新推动突破，两者共同构成科学的发展过程。</p>
+                <p class="source">《2018自然辩证法书后思考题整理》第二章第 5 题</p>
+              </details>
+            </li>
           </ol>
         </article>
         <article class="chapter" id="chapter-3">
           <div class="chapter-title"><h3><span>第三章</span>马克思主义科学技术方法论</h3><p class="source">课件第 171 页 · 5 题</p></div>
           <ol class="questions">
-            <li id="q3-1"><div class="prompt"><span>如何理解马克思主义科学技术方法论与科学研究中的具体方法的关系？</span></div></li>
-            <li id="q3-2"><div class="prompt"><span>如何理解辩证思维渗透在科学研究的全部过程中？</span></div></li>
-            <li id="q3-3"><div class="prompt"><span>如何把握创造性思维特征？</span></div></li>
-            <li id="q3-4"><div class="prompt"><span>注意多学科的交叉与融贯有何方法论意义？</span></div></li>
-            <li id="q3-5"><div class="prompt"><span>战略性思维对于科学研究有何意义？</span></div></li>
+            <li id="q3-1"><div class="prompt"><span>如何理解马克思主义科学技术方法论与科学研究中的具体方法的关系？</span></div>
+              <details class="answer"><summary>参考要点</summary>
+                <p>马克思主义科学技术方法论从具体实践中概括具有普遍指导意义的方法。研究者依据对象、问题和证据条件选择实验、调查或建模等具体方法，并用辩证方法指导各环节。两者是一般与特殊的关系，具体实践不断检验和丰富一般方法。</p>
+                <p class="source">第三章第 3、68–74 页；《2018版自然辩证法课后思考题》PDF 第 7 页</p>
+              </details>
+            </li>
+            <li id="q3-2"><div class="prompt"><span>如何理解辩证思维渗透在科学研究的全部过程中？</span></div>
+              <details class="answer"><summary>参考要点</summary>
+                <p>用科研过程串四组方法。分解问题后综合要素关系，由事实归纳假说并演绎可检验的推论，从抽象规定逐步回到多因素的具体对象，把理论叙述的逻辑与对象演变的历史联系起来。可用同一研究案例贯穿选题、分析、建模和检验。</p>
+                <p class="source">第三章第 68–74 页</p>
+              </details>
+            </li>
+            <li id="q3-3"><div class="prompt"><span>如何把握创造性思维特征？</span></div>
+              <details class="answer"><summary>参考要点</summary>
+                <p>记五个方面：方向求异、结构灵活、过程飞跃、效果整体、表达新颖。发散思维生成多个思路，收敛思维筛选可行的解释。直觉、想象等可激发构想，类比、归纳、演绎及实验有助于形成和检验方案。</p>
+                <p class="source">第三章第 78–85 页</p>
+              </details>
+            </li>
+            <li id="q3-4"><div class="prompt"><span>注意多学科的交叉与融贯有何方法论意义？</span></div>
+              <details class="answer"><summary>参考要点</summary>
+                <p>多学科交叉能用不同视角发现单一学科容易忽视的问题，也能把其他学科的概念和方法经适当改造后用于新对象。融贯还要明确各方法的适用条件并整合证据，才能形成对复杂问题的一致解释。</p>
+                <p class="source">第三章第 98–100 页</p>
+              </details>
+            </li>
+            <li id="q3-5"><div class="prompt"><span>战略性思维对于科学研究有何意义？</span></div>
+              <details class="answer"><summary>参考要点</summary>
+                <p>战略性思维从全局和长远把握趋势，帮助研究者确定重要问题、安排资源和调整技术路线。战术性思维把方向落实为具体步骤，解决实验设计和执行中的问题。研究中要根据阶段结果回看总方向，再调整下一步。</p>
+                <p class="source">第三章第 126–130 页</p>
+              </details>
+            </li>
           </ol>
         </article>
         <article class="chapter" id="chapter-4">
           <div class="chapter-title"><h3><span>第四章</span>马克思主义科学技术社会论</h3><p class="source">课件第 100 页 · 6 题</p></div>
           <ol class="questions">
-            <li id="q4-1"><div class="prompt"><span>为什么说“科学是一种在历史上起推动作用的、革命的力量”？</span></div></li>
-            <li id="q4-2"><div class="prompt"><span>如何看待科学技术对人的异化和对自然的异化？</span></div></li>
-            <li id="q4-3"><div class="prompt"><span>科学技术的社会体制和组织机构对科学技术的发展有何意义？</span></div></li>
-            <li id="q4-4"><div class="prompt"><span>为什么要对科学技术工作者进行伦理规范？</span></div></li>
-            <li id="q4-5"><div class="prompt"><span>如何理解科学技术文化与人文文化之间的冲突与协调？</span></div></li>
-            <li id="q4-6"><div class="prompt"><span>科学技术的风险有哪些？如何恰当地进行科学技术风险评价与决策？</span></div></li>
+            <li id="q4-1"><div class="prompt"><span>为什么说“科学是一种在历史上起推动作用的、革命的力量”？</span></div>
+              <details class="answer"><summary>参考要点</summary>
+                <p>科学成果经由技术和生产实践，可以改变工具、劳动组织和生产效率，推动产业与生产方式变革，进而影响社会关系。科学还会改变认识世界的方法和观念。答题写清“知识进入实践—生产力变化—社会变迁”的作用过程。</p>
+                <p class="source">第二章第 27、39 页；第四章第 5–27 页</p>
+              </details>
+            </li>
+            <li id="q4-2"><div class="prompt"><span>如何看待科学技术对人的异化和对自然的异化？</span></div>
+              <details class="answer"><summary>参考要点</summary>
+                <p>人的异化表现为人创造的技术成果反过来支配劳动和生活。自然的异化表现为自然被当作单一牟利对象，生态受损并反过来制约人类。要结合技术用途、利益关系和制度条件解释成因。课件以资本主义生产关系说明其社会历史根源。</p>
+                <p class="source">第二章第 43–44 页；第四章第 44–49 页</p>
+              </details>
+            </li>
+            <li id="q4-3"><div class="prompt"><span>科学技术的社会体制和组织机构对科学技术的发展有何意义？</span></div>
+              <details class="answer"><summary>参考要点</summary>
+                <p>社会体制通过经费支持、法律保障、交流传播、教育培养和行政协调，为科技活动提供稳定条件。决策咨询、科研、传播和人才培养等机构承担不同职能。明确分工与协作机制，有助于配置资源、形成研究规范并促进成果转化。</p>
+                <p class="source">第四章第 51–59 页</p>
+              </details>
+            </li>
+            <li id="q4-4"><div class="prompt"><span>为什么要对科学技术工作者进行伦理规范？</span></div>
+              <details class="answer"><summary>参考要点</summary>
+                <p>科研活动依赖可信证据和公共信任，工程决策还会影响公众安全、健康与环境。伦理规范约束造假、利益冲突和不负责任的工程选择，明确专业人员对研究对象、同行及公众的责任。可展开说明诚实、公平、尊重环境和维护公共福祉。</p>
+                <p class="source">第四章第 70–76 页</p>
+              </details>
+            </li>
+            <li id="q4-5"><div class="prompt"><span>如何理解科学技术文化与人文文化之间的冲突与协调？</span></div>
+              <details class="answer"><summary>参考要点</summary>
+                <p>科学文化重视证据和求真，技术活动重视可行性与效率，人文文化关注意义、尊严和公平。当效率目标挤压人的权益或带来生态损失时，就会出现冲突。协调需要用证据厘清后果，用人文价值确定用途和边界，再以伦理与制度落实。</p>
+                <p class="source">第四章第 80–86 页</p>
+              </details>
+            </li>
+            <li id="q4-6"><div class="prompt"><span>科学技术的风险有哪些？如何恰当地进行科学技术风险评价与决策？</span></div>
+              <details class="answer"><summary>参考要点</summary>
+                <p>风险可包括健康、环境、伦理、经济和社会后果。评价时比较收益与损害，调查其概率、严重程度、不确定性与承担者。专家评估证据，公众表达体验与利益诉求，政府综合各方意见制定政策，并根据运行反馈调整。</p>
+                <p class="source">第四章第 96–98 页；《2018版自然辩证法课后思考题》PDF 第 10 页</p>
+              </details>
+            </li>
           </ol>
         </article>
         <article class="chapter" id="chapter-5">
           <div class="chapter-title"><h3><span>第五章</span>中国马克思主义科学技术观</h3><p class="source">课件第 69 页 · 3 题</p></div>
           <ol class="questions">
-            <li id="q5-1"><div class="prompt"><span>为什么说中国马克思主义科学技术观是一个科学、完整的思想理论体系？</span></div></li>
-            <li id="q5-2"><div class="prompt"><span>如何理解中国马克思主义科学技术观的理论精髓？</span></div></li>
-            <li id="q5-3"><div class="prompt"><span>如何理解习近平新时代中国特色社会主义思想中的科学技术观的时代意义？</span></div></li>
+            <li id="q5-1"><div class="prompt"><span>为什么说中国马克思主义科学技术观是一个科学、完整的思想理论体系？</span></div>
+              <details class="answer"><summary>参考要点</summary>
+                <p>从来源、内容和发展三点写。理论上继承马克思主义科学技术观，实践上形成于中国革命、建设、改革和现代化进程。内容涵盖科技创新观、人才观和发展观，并随中国科技实践和时代条件变化而不断丰富。</p>
+                <p class="source">第五章第 3–7、64 页</p>
+              </details>
+            </li>
+            <li id="q5-2"><div class="prompt"><span>如何理解中国马克思主义科学技术观的理论精髓？</span></div>
+              <details class="answer"><summary>参考要点</summary>
+                <p>抓住基本原理与中国实践相结合。三个时期围绕科技如何服务建设和发展，不断丰富自主创新、人才培养与科技成果转化的认识。可用“向科学进军—科教兴国与建设创新型国家—创新驱动与科技强国”串联，说明科技服务现代化和人民生活。</p>
+                <p class="source">第五章第 3、8–11、23–27、45–51、64–65 页</p>
+              </details>
+            </li>
+            <li id="q5-3"><div class="prompt"><span>如何理解习近平新时代中国特色社会主义思想中的科学技术观的时代意义？</span></div>
+              <details class="answer"><summary>参考要点</summary>
+                <p>先写新时代的新阶段、新主要矛盾和新奋斗目标，再写如何回应：以科技创新带动发展，发挥人才支撑作用，以科技成果服务民生和绿色转型。最后落到建设世界科技强国和推进中国式现代化。</p>
+                <p class="source">第五章第 6、41–52、55–61 页；《2018版自然辩证法课后思考题》PDF 第 12 页</p>
+              </details>
+            </li>
           </ol>
         </article>
       </section>
